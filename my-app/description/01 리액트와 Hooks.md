@@ -1,4 +1,4 @@
-## App.js에서의 설명
+## React 개요
 
 - React 엔진 - 데이터 변경 감지에서 UI를 그려줌!!
 - 실행과정 (index.html) - SPA(Single Page Application): <a>태그를 사용X 대체태그 사용해야함
