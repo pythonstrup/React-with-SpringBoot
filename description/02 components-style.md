@@ -10,13 +10,20 @@
 
 <br/>
 
-### React Router Dom
+<hr/>
 
-<a> 태그를 사용할 수 없기 때문에 다른 도구를 사용해야한다.
+## React Router Dom
+
+`<a>` 태그를 사용하면 낭비가 심하기 때문에 React Router Dom을 사용한다.
+
+- `<a>`태그는 전체 페이지를 갱신한다. (Header, Footer도 갱신해버림)
+- React Router Dom의 `<Link>`태그는 `<Routes>`태그에 포함되고 `<Route>`태그로 감싸진 컴포넌트만 갱신한다.
 
 - 사이트링크: [react-router-dom v6 업데이트 변경 사항](https://kyung-a.tistory.com/36)
 
-### React Bootstrap
+<hr/>
+
+## React Bootstrap
 
 아래 둘 중 하나의 방법을 사용하면 된다.
 
@@ -38,4 +45,4 @@
 #### Navbar
 
 - Nav.Link는 전체페이지가 갱신되어 버린다.
-- Link에 className을 부여하면 Nav.Link와 같은 디자인으로 해당 컴포넌트만 갱신할 수 있다.
+- Link에 `className="nav-link"`을 부여하면 Nav.Link와 같은 디자인으로 해당 컴포넌트만 갱신할 수 있다.
