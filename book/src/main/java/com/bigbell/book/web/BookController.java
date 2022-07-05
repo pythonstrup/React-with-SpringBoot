@@ -23,7 +23,7 @@ public class BookController {
 	
 	@PostMapping("/book") // @RequestBody를 통해 Json으로 데이터를 받음
 	public ResponseEntity<?> save(@RequestBody Book book) {
-		return new ResponseEntity<>(bookService.save(book), HttpStatus.OK); // 200
+		return new ResponseEntity<>(bookService.save(book), HttpStatus.CREATED); // 201
 	}
 	
 	@GetMapping("/book")
