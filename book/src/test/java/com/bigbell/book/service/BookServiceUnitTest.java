@@ -1,10 +1,15 @@
 package com.bigbell.book.service;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.mockito.Mockito.when;
+
+import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 
+import com.bigbell.book.domain.Book;
 import com.bigbell.book.domain.BookRepository;
 
 /**
@@ -21,4 +26,21 @@ public class BookServiceUnitTest {
 	
 	@Mock
 	private BookRepository bookRepository;
+	
+	@Test
+	public void save_test() {
+		// given
+		Book book = new Book();
+		book.setTitle("Cosmos");
+		book.setAuthor("Karl");
+		
+		// stub - 동작 지정
+		when(bookRepository.save(book)).thenReturn(book);
+		
+		// test execute
+		Book bookEntity = bookService.save(book);
+		
+		// then
+		assertEquals(bookEntity, book);
+	}
 }

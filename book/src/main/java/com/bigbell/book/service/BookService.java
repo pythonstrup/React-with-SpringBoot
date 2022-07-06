@@ -51,7 +51,7 @@ public class BookService {
 	@Transactional
 	public String delete(Long id) {
 		bookRepository.deleteById(id); // 오류가 발생하면 Exception을 자동으로 들어감
-		return "OK";
+		return "ok";
 	}
 }
 
